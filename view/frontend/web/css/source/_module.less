@@ -1,0 +1,79 @@
+@keyframes flickerAnimation {
+  0%   { opacity:0.1; }
+  50%  { opacity:0.3; }
+  100% { opacity:0.1; }
+}
+
+.loading-disabled {
+  animation: flickerAnimation 1s infinite;
+}
+.loading-click-block {
+  position: relative;
+  &:after {
+    position: absolute;
+    display: block;
+    content: ' ';
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+  }
+}
+
+body:not([aria-busy=false]) {
+
+   // Hamburger menu
+  .nav-toggle {
+    .loading-disabled;
+    .loading-click-block;
+  }
+
+  // Header search icon
+  .block-search .label {
+    .loading-disabled;
+    .loading-click-block;
+  }
+
+  // Shop by button
+  .filter-title strong {
+    .loading-disabled;
+    .loading-click-block;
+  }
+
+  // Category sorter
+  .toolbar-sorter select {
+    .loading-disabled;
+    .loading-click-block;
+  }
+
+  #product_addtocart_form {
+    .loading-disabled;
+    .loading-click-block;
+  }
+
+
+  // Product option items
+  .product-options-wrapper select {
+    .loading-disabled;
+    .loading-click-block;
+  }
+
+  // Cart discount block
+  .cart-container .block.discount {
+    .loading-disabled;
+    .loading-click-block;
+  }
+
+  // Cart proceed button
+  .cart-container .checkout.methods {
+    .loading-disabled;
+    .loading-click-block;
+  }
+
+  // Header switcher
+  .switcher-language {
+    .loading-disabled;
+    .loading-click-block;
+  }
+
+}
